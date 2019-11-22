@@ -1,4 +1,4 @@
-name: primeiro_projeto
+name: iniciando_flutter
 description: A new Flutter application.
 
 # The following defines the version and build number for your application.
@@ -56,6 +56,14 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
+  fonts:
+    - family: Rochester
+      fonts:
+        - asset: /home/tiago/.local/share/fonts/Rochester-Regular.ttf
+    - family: Mickey
+      fonts:
+        - asset: /home/tiago/.local/share/fonts/MICKEY.TTF
+
   # fonts:
   #   - family: Schyler
   #     fonts:
