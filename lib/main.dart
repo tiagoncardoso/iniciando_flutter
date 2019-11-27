@@ -1,79 +1,60 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.red,
+void main() {
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    title: 'Frase do dia',
+    home: Container(
+      padding: EdgeInsets.fromLTRB(20, 40, 20, 10),
+      decoration: BoxDecoration(
+          border:Border.all(
+            width: 3,
+            color: Colors.red
+          ),
+        color: Colors.blue
       ),
-      home: MyHomePage(title: 'Frases de Santo Agostinho'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _numeroAleatorio = 0;
-  List _frases = [
-    'O orgulho é a fonte de todas as fraquezas, por que é a fonte de todos os vícios.',
-    'Milagres não são contrários à natureza, mas apenas contrários ao que nós sabemos sobre a natureza.',
-    'Se não podes entender, crê para que entendas. A fé precede, o intelecto segue.',
-    'Foi o orgulho que transformou anjos em demônios, mas é a humildade que faz de homens anjos.',
-    'O mundo é um livro, e quem fica sentado em casa lê somente uma página.',
-    'Creio para compreender, e compreendo para crer melhor.',
-    'Ser cristão não é conquistar Cristo, mas deixar-se conquistar por Ele. Deixa que Ele conquiste em ti, que Ele conquiste para ti, que Ele te conquiste.',
-    'Na essência somos iguais, nas diferenças nos respeitamos.',
-    'No amor do próximo o pobre é rico; sem amor do próximo o rico é pobre.',
-    'Se o homem soubesse as vantagens de ser bom, seria homem de bem por egoísmo.',
-    'Há homens que se agarram a sua opinião, não por ser verdadeira, mas simplesmente por ser sua.'
-  ];
-
-  void _incrementCounter() {
-    setState(() {
-      _numeroAleatorio = new Random().nextInt(10);
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'Santo Agostinho disse:',
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Padding(
+            padding: EdgeInsets.only(bottom: 30),
+            child: (
+                Text(
+                  'Normalmente as oportunidades estão disfarçadas de trabalho duro, é por isso que a maioria das pessoas não as reconhecem.',
+                  style: TextStyle(
+                      fontSize: 25,
+                      color: Colors.amber,
+                      decoration: TextDecoration.none
+                  ),
+                  textAlign: TextAlign.center,
+                )
             ),
-            Text(
-              _frases[_numeroAleatorio],
-              style: Theme.of(context).textTheme.caption,
-              textAlign: TextAlign.center
+          ),
+          FlatButton(
+            padding: EdgeInsets.all(8.0),
+            color: Colors.red,
+            textColor: Colors.white,
+            splashColor: Colors.redAccent,
+            child: Text(
+              'Clique aqui',
+              style: TextStyle(
+                  fontSize: 15,
+
+              ),
             ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Gera nova frase',
-        child: Icon(Icons.cached),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
-  }
+            onPressed: () {
+              /**/
+            },
+          ),
+          Padding(
+            padding: EdgeInsets.only(top: 20),
+            child: Image.asset(
+              'images/bêia.png',
+              fit: BoxFit.fill,
+            ),
+          )
+        ],
+      )
+    )
+  ));
 }
