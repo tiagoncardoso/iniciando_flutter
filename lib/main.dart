@@ -13,7 +13,7 @@ class HomeStateful extends StatefulWidget {
 }
 
 class _HomeStatefulState extends State<HomeStateful> {
-  var _tit = 'Fake buki';
+  var _tit = 'Começa por aqui...';
   var _titulo = '';
   List<String> _desenho = [
     'images/bêia.png',
@@ -104,41 +104,27 @@ class _HomeStatefulState extends State<HomeStateful> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              Text(
-                'Ha',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold
-                ),
+              Icon(
+                Icons.favorite,
+                color: Colors.deepOrange
               ),
-              Text(
-                'ié',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold
-                ),
+              Icon(
+                Icons.sentiment_satisfied,
+                color: Colors.white
               ),
-              Text(
-                'ié',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold
-                ),
+              Icon(
+                Icons.airplanemode_active,
+                color: Colors.deepOrange
               ),
-              Text(
-                'Glu',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold
-                ),
+              Icon(
+                Icons.score,
+                color: Colors.white
               ),
-              Text(
-                'Glu',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold
-                ),
+              Icon(
+                Icons.cloud,
+                color: Colors.deepOrange
               ),
+
             ],
           ),
         ),
