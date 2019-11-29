@@ -1,4 +1,4 @@
-# iniciando_flutter
+# 01 - Primeiros Passos (iniciando_flutter)
 
 Iniciando Flutter é o início de uma jornada. O primeiro app que não é tão importante pelo que faz, mas pelo que representa (o início de uma jornada ¬¬)
 
